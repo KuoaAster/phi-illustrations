@@ -12,11 +12,15 @@ print(f"📚 成功加载了 {len(id_to_song)} 首歌的对应关系！")
 folder_path = r".\Texture2D"
 count = 0
 for filename in os.listdir(folder_path):
-    if filename.startswith("Illustration_") and filename.endswith(".png"):
-        song_id = filename.replace("Illustration_", "").replace(".png", "")
+    if filename.startswith("Illustration #") and filename.endswith(".png"):
+        song_id = filename.replace("Illustration #", "").replace(".png", "")
         
         if song_id in id_to_song:
-            new_name = f"{id_to_song[song_id]}.png"
+            raw_name = id_to_song[song_id]
+            safe_name = raw_name
+            for char in ['/', '\\', ':', '*', '?', '"', '<', '>', '|']:
+                safe_name = safe_name.replace(char, '_')
+            new_name = f"{safe_name}.png"
             old_path = os.path.join(folder_path, filename)
             new_path = os.path.join(folder_path, new_name)
             
