@@ -6,6 +6,8 @@
 
 编号对应曲绘的表即为“illustrations_chart.csv”
 
+若不小心打开了csv文件或者你想加新的编号，请以CSV UTF-8的格式保存（不能直接保存！要另存为，并在“文件类型”那里找到到CSV UTF-8格式，然后替换原文件）
+
 版本4.0.0，第九章第一次更新
 
 出了新版本但我没更新或者编号错了的话，请在顶部菜单栏点击 [Issues](https://github.com/KuoaAster/phi-illustrations/issues) 标签，然后点击 `New issue` 反馈给我。
